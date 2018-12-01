@@ -12,13 +12,12 @@
 */
 
 Route::get('/', function () {
-   	if (!Agent::isDesktop()) {
-   		return redirect('/login');
-   	}
+    if (!Agent::isDesktop()) {
+        return redirect('/login');
+    }
 
-   	return view('frontend.landing');
+    return view('frontend.landing');
 })->name('Landing Page');
-
 
 Auth::routes();
 
