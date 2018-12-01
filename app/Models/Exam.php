@@ -2,12 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Building;
-use App\Models\Classes;
-use App\Models\Notification;
-use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
-
 class Exam extends Mode
 {
     protected $table = 'exam';
@@ -56,5 +50,4 @@ class Exam extends Mode
     {
         return $this->belongsTo(User::class);
     }
-
 }
