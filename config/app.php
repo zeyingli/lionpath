@@ -30,6 +30,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Version
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "version number" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services the application utilizes. Set this in your ".env" file.
+    |
+    */
+
+    'version' => env('APP_VER', '1.0'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------
     |
@@ -55,6 +68,19 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Content Delivery Network (CDN)
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the CDN URL your application is currently
+    | using.
+    |
+    */
+
+    'cdn'        => env('APP_CDN', 'https://cdn.zeyingli.com/lionpath/'),
+    'cloudfront' => env('APP_CLOUDFRONT', 'https://cdn.zeyingli.com/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -140,6 +166,7 @@ return [
          * Laravel Framework Service Providers...
          */
         Cornford\Googlmapper\MapperServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -207,6 +234,7 @@ return [
         'File'         => Illuminate\Support\Facades\File::class,
         'Gate'         => Illuminate\Support\Facades\Gate::class,
         'Hash'         => Illuminate\Support\Facades\Hash::class,
+        'Agent'        => Jenssegers\Agent\Facades\Agent::class,
         'Lang'         => Illuminate\Support\Facades\Lang::class,
         'Log'          => Illuminate\Support\Facades\Log::class,
         'Mail'         => Illuminate\Support\Facades\Mail::class,

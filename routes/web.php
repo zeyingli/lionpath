@@ -12,9 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+   	if (!Agent::isDesktop()) {
+   		return redirect('/login');
+   	}
+
+   	return view('frontend.landing');
+})->name('Landing Page');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// User Dashboard
+Route::get('/dashboard', 'FrontendController@dashboard')->name('User Dashboard');
