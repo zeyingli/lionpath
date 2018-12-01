@@ -2,11 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Building extends Mode
 {
-
     protected $table = 'building';
 
     protected $guarded = 'id';
@@ -22,5 +19,4 @@ class Building extends Mode
         'lat',
         'lng',
     ];
-
 }

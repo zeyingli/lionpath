@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Notification extends Mode
 {
-
     protected $table = 'notification';
 
     protected $guarded = 'id';
 
     protected $dates = [
-        'notify_date', 
+        'notify_date',
     ];
 
     /**
@@ -27,5 +24,4 @@ class Notification extends Mode
         'notify_date',
         'notify_frequency',
     ];
-
 }
