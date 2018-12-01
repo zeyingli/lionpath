@@ -2,7 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Building;
+use App\Models\Classes;
+use App\Models\Enrollment;
+use App\Models\Exam;
+use App\Models\Notification;
+use App\Models\User;
 use Auth;
+use Carbon\Carbon;
+use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Validator;
 
 class FrontendController extends Controller
 {
@@ -23,5 +34,6 @@ class FrontendController extends Controller
      */
     public function dashboard()
     {
+        return view('frontend.dashboard');
     }
 }

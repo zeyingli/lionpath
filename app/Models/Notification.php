@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
-class Notification extends Mode
+use App\Models\Exam;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
+class Notification extends Model
 {
     protected $table = 'notification';
 

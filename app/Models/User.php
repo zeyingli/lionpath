@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Classes;
+use App\Models\Enrollment;
+use App\Models\Exam;
+use App\Models\Notification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
