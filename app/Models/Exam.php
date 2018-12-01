@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Exam extends Mode
 {
-
     protected $table = 'exam';
 
     protected $guarded = 'id';
 
     protected $dates = [
-        'start_time', 
+        'start_time',
         'end_time',
     ];
 
@@ -26,7 +23,6 @@ class Exam extends Mode
         'building_id',
         'room',
         'start_time',
-        'end_time', 
+        'end_time',
     ];
-
 }

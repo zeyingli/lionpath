@@ -2,11 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Enrollment extends Mode
 {
-
     protected $table = 'enrollment';
 
     protected $guarded = 'id';
@@ -20,5 +17,4 @@ class Enrollment extends Mode
         'users_id',
         'class_id',
     ];
-
 }

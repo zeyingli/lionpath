@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Classes extends Mode
 {
-
     protected $table = 'class';
 
     protected $guarded = 'id';
 
     protected $dates = [
-        'start_date', 
+        'start_date',
         'end_date',
     ];
 
@@ -22,7 +19,7 @@ class Classes extends Mode
      * @var array
      */
     protected $fillable = [
-        'nbr', 
+        'nbr',
         'name',
         'unit',
         'section',
@@ -33,5 +30,4 @@ class Classes extends Mode
         'end_date',
         'status',
     ];
-   
 }
