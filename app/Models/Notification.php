@@ -2,10 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Exam;
-use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
-
 class Notification extends Mode
 {
     protected $table = 'notification';
@@ -43,5 +39,4 @@ class Notification extends Mode
     {
         return $this->belongsTo(Exam::class);
     }
-
 }

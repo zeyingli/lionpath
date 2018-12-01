@@ -2,12 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Building;
-use App\Models\Enrollment;
-use App\Models\Exam;
-use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
-
 class Classes extends Mode
 {
     protected $table = 'class';
@@ -62,4 +56,3 @@ class Classes extends Mode
         return $this->hasMany(User::class);
     }
 }
-
