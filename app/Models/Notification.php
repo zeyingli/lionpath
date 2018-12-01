@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Exam;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
 class Notification extends Mode
 {
     protected $table = 'notification';
@@ -24,4 +28,20 @@ class Notification extends Mode
         'notify_date',
         'notify_frequency',
     ];
+
+    /**
+     * Relationships.
+     *
+     * @return mixed
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function exam()
+    {
+        return $this->belongsTo(Exam::class);
+    }
+
 }

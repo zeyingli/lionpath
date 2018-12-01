@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Classes;
+use App\Models\Exam;
+use Illuminate\Database\Eloquent\Model;
+
 class Building extends Mode
 {
     protected $table = 'building';
@@ -19,4 +23,19 @@ class Building extends Mode
         'lat',
         'lng',
     ];
+
+    /**
+     * Relationships.
+     *
+     * @return mixed
+     */
+    public function classes()
+    {
+        return $this->hasMany(Classes::class);
+    }
+
+    public function exam()
+    {
+        return $this->hasMany(Exam::class);
+    }
 }

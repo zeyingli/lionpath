@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Classes;
+use App\Models\Enrollment;
+use App\Models\Exam;
+use App\Models\Notification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -26,4 +30,29 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Relationships.
+     *
+     * @return mixed
+     */
+    public function classes()
+    {
+        return $this->belongsTo(Classes::class);
+    }
+
+    public function enrollment()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+    public function exam()
+    {
+        return $this->hasMany(Exam::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class);
+    }
 }

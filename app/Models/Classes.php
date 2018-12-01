@@ -2,6 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Building;
+use App\Models\Enrollment;
+use App\Models\Exam;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
 class Classes extends Mode
 {
     protected $table = 'class';
@@ -30,4 +36,30 @@ class Classes extends Mode
         'end_date',
         'status',
     ];
+
+    /**
+     * Relationships.
+     *
+     * @return mixed
+     */
+    public function building()
+    {
+        return $this->belongsTo(Building::class);
+    }
+
+    public function enrollment()
+    {
+        return $this->belongsTo(Enrollment::class);
+    }
+
+    public function exam()
+    {
+        return $this->hasMany(Exam::class);
+    }
+
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
 }
+

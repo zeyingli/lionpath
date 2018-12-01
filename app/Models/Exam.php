@@ -2,6 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Building;
+use App\Models\Classes;
+use App\Models\Notification;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
 class Exam extends Mode
 {
     protected $table = 'exam';
@@ -25,4 +31,30 @@ class Exam extends Mode
         'start_time',
         'end_time',
     ];
+
+    /**
+     * Relationships.
+     *
+     * @return mixed
+     */
+    public function building()
+    {
+        return $this->belongsTo(Building::class);
+    }
+
+    public function classes()
+    {
+        return $this->belongsTo(Classes::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
