@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
-class Enrollment extends Mode
+use App\Models\Classes;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
+class Enrollment extends Model
 {
     protected $table = 'enrollment';
 

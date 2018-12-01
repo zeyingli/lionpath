@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
-class Building extends Mode
+use App\Models\Classes;
+use App\Models\Exam;
+use Illuminate\Database\Eloquent\Model;
+
+class Building extends Model
 {
     protected $table = 'building';
 
