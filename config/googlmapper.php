@@ -61,7 +61,7 @@ return [
     | Googlmapper displayed map.
     |
     */
-    'marker' => false,
+    'marker' => true,
 
     /*
     |--------------------------------------------------------------------------
