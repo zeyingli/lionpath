@@ -29,11 +29,12 @@ class Enrollment extends Model
      */
     public function classes()
     {
-        return $this->hasOne(Classes::class);
+        return $this->belongsTo(Classes::class);
     }
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
 }

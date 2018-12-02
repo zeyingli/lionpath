@@ -49,7 +49,7 @@ class Classes extends Model
 
     public function enrollment()
     {
-        return $this->belongsTo(Enrollment::class);
+        return $this->hasMany(Enrollment::class);
     }
 
     public function exam()
